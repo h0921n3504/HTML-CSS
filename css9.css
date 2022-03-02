@@ -1,0 +1,101 @@
+/* ブラウザがそれぞれ持っているCSSをリセットするための記述 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 50px;
+  background-color: #ff9a4b;
+}
+
+footer {
+  height: 50px;
+  background-color: #aaaaaa;
+}
+
+.step {
+  background-color: #ff9a4b;
+  position: absolute; /* box-itemの左上を基準に絶対位置で指定する */
+  top: 0;
+  left: 0;
+  color: #fff; /* 文字色を白に変更 */
+}
+
+.box {
+  padding: 50px 0;
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box-item {
+  width: 300px;
+  background-color: #eeeeee;
+  margin-right: 30px;
+  position: relative;
+  padding: 10px;
+}
+
+.image1 {
+  height: 150px;
+  background-position: bottom;
+  background-size: cover;
+  background-image: url(./img/flow01.png);
+}
+
+.image2 {
+  height: 150px;
+  background-position: bottom;
+  background-size: cover;
+  background-image: url(./img/flow02.png);
+}
+
+.image3 {
+  height: 150px;
+  background-position: bottom;
+  background-image: url(./img/flow03.png);
+}
+
+.box-item:last-child {
+  margin-right: 0;
+}
+
+.midashi {
+  padding-top: 15px;
+}
+
+.honbun {
+  padding-top: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .box {
+    width: 100%;
+    display: block;
+    padding: 50px 0;
+  }
+
+  .box-item {
+    width: 90%;
+    margin: 0 auto 20px auto;
+  }
+
+  .box-item:last-child {
+    margin: 0 auto;
+  }
+
+  .image1 {
+    height: 150px;
+  }
+
+  .image2 {
+    height: 150px;
+  }
+
+  .image3 {
+    height: 150px;
+  }
+}
